@@ -204,21 +204,21 @@ function App() {
               const Vs = add(
                 multiply(
                   coeffs.a,
-                  complex(data.current, data.currentImaginary),
+                  complex(data.voltage, data.voltageImaginary),
                 ),
                 multiply(
                   coeffs.b,
-                  complex(data.voltage, data.voltageImaginary),
+                  complex(data.current, data.currentImaginary),
                 ),
               );
               const Is = add(
                 multiply(
                   coeffs.c,
-                  complex(data.current, data.currentImaginary),
+                  complex(data.voltage, data.voltageImaginary),
                 ),
                 multiply(
                   coeffs.d,
-                  complex(data.voltage, data.voltageImaginary),
+                  complex(data.current, data.currentImaginary),
                 ),
               ) as any;
               const Pl = calculatePowerLoss(data, Is);
